@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./font-awesome-6.5.1-pro-full/css/all.css">
 </head>
 <body>
-    <header class="bg-rose-900 overflow-hidden flex flex-col">
+    <header class="bg-rose-900 overflow-hidden flex flex-col mb-20">
         <div class="flex flex-col mx-50">
             <div class="flex text-white p-5 justify-between mb-20">
                 <h1 class="lobster-two-regular text-xl">name</h1>
@@ -25,21 +25,30 @@
                 </div>
             </div>
             <h1 class="text-white text-5xl font-bold mb-2 ml-20">Find your stay</h1>
-            <h2 class="text-white text-xl mb-30 ml-20">eats,breakfast,spa,...</h2>
-            <div class="bg-yellow-500 absolute h-20 mt-80 border border-solid border-yellow-500 border-5 rounded-sm flex gap-1">
-                <select name="" id="" class="bg-white p-6 relative rounded-md">
-                    <option value="">Standard room</option>
-                    <option value="">Adjoining room</option>
-                    <option value="">Presidential suite</option>
-                    <option value="">Queen room</option>
-                </select>
+            <h2 class="text-white text-2xl mb-30 ml-20">eats,breakfast,spa,...</h2>
+            <div class="bg-yellow-500 absolute h-20 mt-80 border border-solid border-yellow-500 border-5 rounded-sm flex gap-1 font-medium">
+                <div class="bg-white p-6 relative rounded-md">
+                    <i class="fa-solid fa-bed-front"></i>
+                    <select name="" id="">
+                        <option value="">Standard room</option>
+                        <option value="">Adjoining room</option>
+                        <option value="">Presidential suite</option>
+                        <option value="">Queen room</option>
+                    </select>
+                </div>
                 <input type="date" class="bg-white relative p-6 rounded-md">
-                <select name="" id="" class="bg-white relative p-6 rounded-md">
-
-                </select>
+                <div class="bg-white relative p-6 rounded-md">
+                    <i class="fa-light fa-user"></i>
+                    <input type="number" placeholder="adult">
+                    <i class="fa-light fa-user"></i>
+                    <input type="number" placeholder="child">
+                </div>
                 <button class="bg-rose-600 p-6 px-10 text-white text-xl rounded-md">Search</button>
             </div>
         </div>
     </header>
+    <section class="overflow-hidden flex flex-col mx-50">
+        <h1>Why ... ?</h1>
+    </section>
 </body>
 </html>
