@@ -1,54 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="https://ih1.redbubble.net/image.2870132373.1841/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.u1.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="./font-awesome-6.5.1-pro-full/css/all.css">
-</head>
-<body>
-    <header class="bg-rose-900 overflow-hidden flex flex-col mb-20">
-        <div class="flex flex-col mx-50">
-            <div class="flex text-white p-5 justify-between mb-20">
-                <h1 class="lobster-two-regular text-xl">name</h1>
-                <div class="flex gap-6">
-                    <select name="currency" id="" class="font-bold bg-rose-900">
-                        <option value="">VND</option>
-                        <option value="">EUR</option>
-                        <option value="">USD</option>
-                    </select>
-                    <button class="bg-white text-rose-800 rounded-sm py-1.5 px-3 font-medium shadow-md">Register</button>
-                    <button class="bg-white text-rose-800 rounded-sm py-1.5 px-3 font-medium shadow-md">Sign in</button>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Booking</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link rel="shortcut icon" href="https://ih1.redbubble.net/image.2870132373.1841/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.u1.jpg" type="image/x-icon" />
+        <link rel="stylesheet" href="./font-awesome-6.5.1-pro-full/css/all.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header class="bg-rose-900 overflow-hidden flex flex-col mb-20">
+            <div class="flex flex-col mx-50">
+                <div class="flex text-white p-5 justify-between mb-20">
+                    <h1 class="lobster-two-regular text-xl">MiaHotel</h1>
+                    <div class="flex gap-6">
+                        <select name="currency" id="" class="font-bold bg-rose-900">
+                            <option value="">VND</option>
+                            <option value="">EUR</option>
+                            <option value="">USD</option>
+                        </select>
+                        <button class="bg-white text-rose-800 rounded-sm py-1.5 px-3 font-medium shadow-md">Register</button>
+                        <button class="bg-white text-rose-800 rounded-sm py-1.5 px-3 font-medium shadow-md">Sign in</button>
+                    </div>
+                </div>
+                <h1 class="text-white text-5xl font-bold mb-2 ml-20">Find your stay</h1>
+                <h2 class="text-white text-2xl mb-30 ml-20">eats,breakfast,spa,...</h2>
+                <div class="bg-yellow-500 absolute h-20 mt-80 border border-solid border-yellow-500 border-5 rounded-sm flex gap-1 font-medium">
+                    <div class="bg-white p-6 relative rounded-md">
+                        <i class="fa-solid fa-bed-front"></i>
+                        <select name="" id="">
+                            <option value="">Standard room</option>
+                            <option value="">Adjoining room</option>
+                            <option value="">Presidential suite</option>
+                            <option value="">Queen room</option>
+                        </select>
+                    </div>
+                    <input type="date" class="bg-white relative p-6 rounded-md" />
+                    <div class="bg-white relative p-6 rounded-md">
+                        <i class="fa-light fa-user"></i>
+                        <input type="number" placeholder="adult" />
+                        <i class="fa-light fa-user"></i>
+                        <input type="number" placeholder="child" />
+                    </div>
+                    <button class="bg-rose-600 p-6 px-10 text-white text-xl rounded-md">Search</button>
                 </div>
             </div>
-            <h1 class="text-white text-5xl font-bold mb-2 ml-20">Find your stay</h1>
-            <h2 class="text-white text-2xl mb-30 ml-20">eats,breakfast,spa,...</h2>
-            <div class="bg-yellow-500 absolute h-20 mt-80 border border-solid border-yellow-500 border-5 rounded-sm flex gap-1 font-medium">
-                <div class="bg-white p-6 relative rounded-md">
-                    <i class="fa-solid fa-bed-front"></i>
-                    <select name="" id="">
-                        <option value="">Standard room</option>
-                        <option value="">Adjoining room</option>
-                        <option value="">Presidential suite</option>
-                        <option value="">Queen room</option>
-                    </select>
-                </div>
-                <input type="date" class="bg-white relative p-6 rounded-md">
-                <div class="bg-white relative p-6 rounded-md">
-                    <i class="fa-light fa-user"></i>
-                    <input type="number" placeholder="adult">
-                    <i class="fa-light fa-user"></i>
-                    <input type="number" placeholder="child">
-                </div>
-                <button class="bg-rose-600 p-6 px-10 text-white text-xl rounded-md">Search</button>
+        </header>
+        <section class="overflow-hidden flex flex-col mx-50">
+            <h1 class="text-2xl font-bold mb-2">Why?</h1>
+            <div class="ml-5">
+                <img src="https://q-xx.bstatic.com/xdata/images/xphoto/814x138/535341132.jpeg?k=9adf4d98ff2d48c5745b37654d2d77e09169647b979dfda9c6baa54198b9fc6c&o=" alt="" class="w-150 rounded-sm" />
+                <p class="absolute -mt-23 ml-5 text-white font-semibold text-xl">Save up to 20% with a deal</p>
+                <p class="absolute -mt-16 ml-8 text-white">Live the dream in a vacation home</p>
+                <p class="absolute -mt-10 ml-8 text-white">Variety of choices</p>
             </div>
-        </div>
-    </header>
-    <section class="overflow-hidden flex flex-col mx-50">
-        <h1>Why ... ?</h1>
-    </section>
-</body>
+        </section>
+        <section class="mx-50 mt-10">
+            <h1 class="text-2xl font-bold mb-2">Rooms</h1>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide shadow-md rounded-md overflow-hidden">
+                        <img
+                            src="https://r-xx.bstatic.com/xdata/images/hotel/263x210/595550178.jpeg?k=1db9bffadd03a0f2a9f0a06ba6c7751b16465f2dd251738f229d7a57dca799ef&o="
+                            alt=""
+                            width="100%"
+                            class="mb-2"
+                        />
+                        <h2 class="font-bold text-xl ml-2">Standard room</h2>
+                        <p class="text-sm ml-4">Dong Nai, Vietnam</p>
+                        <p class="text-sm ml-4">2 adults</p>
+                        <p class="mt-15 text-right font-bold mr-2">560,000VND/Night</p>
+                    </div>
+                    <div class="swiper-slide shadow-md rounded-md overflow-hidden">
+                        <img
+                            src="https://cf.bstatic.com/xdata/images/hotel/square600/13125860.webp?k=35b70a7e8a17a71896996cd55d84f742cd15724c3aebaed0d9b5ba19c53c430b&o="
+                            alt=""
+                            width="100%"
+                            class="mb-2"
+                        />
+                        <h2 class="font-bold text-xl ml-2">Adjoining room</h2>
+                        <p class="text-sm ml-4">Dong Nai, Vietnam</p>
+                        <p class="text-sm ml-4">2 adults</p>
+                        <p class="mt-15 text-right font-bold mr-2">560,000VND/Night</p>
+                    </div>
+                    <div class="swiper-slide shadow-md rounded-md overflow-hidden">
+                        <img src="https://www.grandamerica.com/wp-content/uploads/2017/03/Grand_America_Hotel_Presidential_Suite_Bedroom.jpg" width="100%" class="mb-2" />
+                        <h2 class="font-bold text-xl ml-2">Presidental room</h2>
+                        <p class="text-sm ml-4">Dong Nai, Vietnam</p>
+                        <p class="text-sm ml-4">2 adults</p>
+                        <p class="mt-15 text-right font-bold mr-2">560,000VND/Night</p>
+                    </div>
+                    <div class="swiper-slide shadow-md rounded-md overflow-hidden">
+                        <img
+                            src="https://webbox.imgix.net/images/yydjyukuhvrigrwy/c4efc4df-c1a2-4c49-84de-9a5eb9c075ba.jpg?auto=format,compress&fit=crop&crop=entropy"
+                            alt=""
+                            width="100%"
+                            class="mb-2"
+                        />
+                        <h2 class="font-bold text-xl ml-2">Queen room</h2>
+                        <p class="text-sm ml-4">Dong Nai, Vietnam</p>
+                        <p class="text-sm ml-4">2 adults</p>
+                        <p class="mt-15 text-right font-bold mr-2">560,000VND/Night</p>
+                    </div>
+                    <div class="swiper-slide shadow-md rounded-md overflow-hidden">
+                        <img
+                            src="https://cf.bstatic.com/xdata/images/hotel/square600/13125860.webp?k=35b70a7e8a17a71896996cd55d84f742cd15724c3aebaed0d9b5ba19c53c430b&o="
+                            alt=""
+                            width="100%"
+                            class="mb-2"
+                        />
+                        <h2 class="font-bold text-xl ml-2">Standard room</h2>
+                        <p class="text-sm ml-4">Dong Nai, Vietnam</p>
+                        <p class="text-sm ml-4">2 adults</p>
+                        <p class="mt-15 text-right font-bold mr-2">560,000VND/Night</p>
+                    </div>
+                    <div class="swiper-slide shadow-md rounded-md overflow-hidden">
+                        <img
+                            src="https://cf.bstatic.com/xdata/images/hotel/square600/13125860.webp?k=35b70a7e8a17a71896996cd55d84f742cd15724c3aebaed0d9b5ba19c53c430b&o="
+                            alt=""
+                            width="100%"
+                            class="mb-2"
+                        />
+                        <h2 class="font-bold text-xl ml-2">Standard room</h2>
+                        <p class="text-sm ml-4">Dong Nai, Vietnam</p>
+                        <p class="text-sm ml-4">2 adults</p>
+                        <p class="mt-15 text-right font-bold mr-2">560,000VND/Night</p>
+                    </div>
+                    <div class="swiper-slide shadow-md rounded-md overflow-hidden">
+                        <img
+                            src="https://cf.bstatic.com/xdata/images/hotel/square600/13125860.webp?k=35b70a7e8a17a71896996cd55d84f742cd15724c3aebaed0d9b5ba19c53c430b&o="
+                            alt=""
+                            width="100%"
+                            class="mb-2"
+                        />
+                        <h2 class="font-bold text-xl ml-2">Standard room</h2>
+                        <p class="text-sm ml-4">Dong Nai, Vietnam</p>
+                        <p class="text-sm ml-4">2 adults</p>
+                        <p class="mt-15 text-right font-bold mr-2">560,000VND/Night</p>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+            <!-- Initialize Swiper -->
+            <script>
+                var swiper = new Swiper(".mySwiper", {
+                    slidesPerView: 4,
+                    spaceBetween: 10,
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                });
+            </script>
+        </section>
+    </body>
 </html>
