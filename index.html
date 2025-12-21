@@ -24,8 +24,17 @@
                             <option value="">EUR</option>
                             <option value="">USD</option>
                         </select>
-                        <a href="regis.html" class="bg-white text-rose-800 rounded-sm py-1.5 px-3 font-medium shadow-md hover:bg-rose-900 hover:text-white duration-200">Register</a>
-                        <a href="log.html" class="bg-white text-rose-800 rounded-sm py-1.5 px-3 font-medium shadow-md hover:bg-rose-900 hover:text-white duration-200">Sign in</a>
+                        <a href="regis.html" id="btnRegis" class="bg-white text-rose-800 rounded-sm py-1.5 px-3 font-medium shadow-md hover:bg-rose-900 hover:text-white duration-200">Register</a>
+                        <a href="log.html" id="btnLogin" class="bg-white text-rose-800 rounded-sm py-1.5 px-3 font-medium shadow-md hover:bg-rose-900 hover:text-white duration-200">Sign in</a>
+                        <details id="profile" class="hidden dropdown dropdown-bottom dropdown-end fixed ml-15">
+                            <summary class="btn m-1 h-10 w-10 flex items-center justify-center rounded-full bg-rose-600">
+                                <i class="fa-solid fa-user text-sm"></i>
+                            </summary>
+                            <ul class="menu dropdown-content bg-gray-800/50 z-1 p-2 shadow-sm">
+                                <li class="p-2 hover:bg-gray-800"><h1 id="greeting" class="text-sm">Xin chào: user</h1></li>
+                                <li id="btn-logout" class="p-2 hover:bg-gray-800">Đăng xuất</li>
+                            </ul>
+                        </details>
                     </div>
                 </div>
                 <h1 class="text-white text-7xl font-bold mb-1 ml-20 lobster-two-regular">MiaHotel</h1>
@@ -88,6 +97,9 @@
             <p class="mb-2 text-gray-500">You may like</p>
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
+                    <a href="add-room.html">
+                        <button class="btn btn-primary"></button>
+                    </a>
                     <a href="r_1.html" class="swiper-slide shadow-md rounded-md overflow-hidden hover:opacity-50 duration-200">
                         <div class="h-[150px] w-full overflow-hidden">
                             <img
@@ -100,80 +112,6 @@
                         <p class="text-sm ml-4">Dong Nai, Vietnam</p>
                         <p class="text-sm ml-4">2 adults</p>
                         <p class="mt-15 text-right font-bold mr-2">350,000VND/Night</p>
-                    </a>
-                    <a href="" class="swiper-slide shadow-md rounded-md overflow-hidden hover:opacity-50 duration-200">
-                        <div class="h-[150px] w-full overflow-hidden">
-                            <img
-                                src="https://cf.bstatic.com/xdata/images/hotel/square600/13125860.webp?k=35b70a7e8a17a71896996cd55d84f742cd15724c3aebaed0d9b5ba19c53c430b&o="
-                                alt=""
-                                class="mb-2 h-full w-full"
-                            />
-                        </div>
-                        <h2 class="font-bold text-xl ml-2">Adjoining room</h2>
-                        <p class="text-sm ml-4">Dong Nai, Vietnam</p>
-                        <p class="text-sm ml-4">2 adults, 1 child</p>
-                        <p class="mt-15 text-right font-bold mr-2">420,000VND/Night</p>
-                    </a>
-                    <a href="" class="swiper-slide shadow-md rounded-md overflow-hidden hover:opacity-50 duration-200">
-                        <div class="h-[150px] w-full overflow-hidden">
-                            <img src="https://www.landmarklondon.co.uk/wp-content/uploads/2019/05/Presidential-Suite-3-1800x1200.jpg" alt="" class="mb-2 h-full w-full" />
-                        </div>
-                        <h2 class="font-bold text-xl ml-2">Presidental room</h2>
-                        <p class="text-sm ml-4">Dong Nai, Vietnam</p>
-                        <p class="text-sm ml-4">2 adults</p>
-                        <p class="mt-15 text-right font-bold mr-2">560,000VND/Night</p>
-                    </a>
-                    <a href="" class="swiper-slide shadow-md rounded-md overflow-hidden hover:opacity-50 duration-200">
-                        <div class="h-[150px] w-full overflow-hidden">
-                            <img
-                                src="https://cf.bstatic.com/xdata/images/hotel/square600/420377357.webp?k=29a0e9879ac8361539c3dae41f047d383e6fa6917f8f47cb50dad001ada0eae6&o="
-                                alt=""
-                                class="mb-2 h-full w-full"
-                            />
-                        </div>
-                        <h2 class="font-bold text-xl ml-2">Queen room</h2>
-                        <p class="text-sm ml-4">Dong Nai, Vietnam</p>
-                        <p class="text-sm ml-4">2 adults, 2 childs</p>
-                        <p class="mt-15 text-right font-bold mr-2">560,000VND/Night</p>
-                    </a>
-                    <a href="" class="swiper-slide shadow-md rounded-md overflow-hidden hover:opacity-50 duration-200">
-                        <div class="h-[150px] w-full overflow-hidden">
-                            <img
-                                src="https://cf.bstatic.com/xdata/images/hotel/square240/688430796.jpg?k=bf552a3e4286aa103768901e7833b6915bb42cd3c6f3137fcd4f381bb0cf88d7&o="
-                                alt=""
-                                class="mb-2 h-full w-full"
-                            />
-                        </div>
-                        <h2 class="font-bold text-xl ml-2">Standard room 2</h2>
-                        <p class="text-sm ml-4">Dong Nai, Vietnam</p>
-                        <p class="text-sm ml-4">2 adults, 1 child</p>
-                        <p class="mt-15 text-right font-bold mr-2">350,000VND/Night</p>
-                    </a>
-                    <a href="" class="swiper-slide shadow-md rounded-md overflow-hidden hover:opacity-50 duration-200">
-                        <div class="h-[150px] w-full overflow-hidden">
-                            <img
-                                src="https://cf.bstatic.com/xdata/images/hotel/square600/44146554.webp?k=2b0fd82f2d6230cc7c3d20f4a19f141da3f14c25fc8402a8f9334e8bc0c98508&o="
-                                alt=""
-                                class="mb-2 h-full w-full"
-                            />
-                        </div>
-                        <h2 class="font-bold text-xl ml-2">Family room(standard)</h2>
-                        <p class="text-sm ml-4">Dong Nai, Vietnam</p>
-                        <p class="text-sm ml-4">2 adults, 2 childs</p>
-                        <p class="mt-15 text-right font-bold mr-2">420,000VND/Night</p>
-                    </a>
-                    <a href="" class="swiper-slide shadow-md rounded-md overflow-hidden hover:opacity-50 duration-200">
-                        <div class="h-[150px] w-full overflow-hidden">
-                            <img
-                                src="https://webbox.imgix.net/images/yydjyukuhvrigrwy/c4efc4df-c1a2-4c49-84de-9a5eb9c075ba.jpg?auto=format,compress&fit=crop&crop=entropy"
-                                alt=""
-                                class="mb-2 h-full w-full"
-                            />
-                        </div>
-                        <h2 class="font-bold text-xl ml-2">Queen room 2</h2>
-                        <p class="text-sm ml-4">Dong Nai, Vietnam</p>
-                        <p class="text-sm ml-4">2 adults, 1 child</p>
-                        <p class="mt-15 text-right font-bold mr-2">560,000VND/Night</p>
                     </a>
                 </div>
                 <div class="swiper-button-next"></div>
@@ -330,5 +268,6 @@
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Booking.com_logo.svg/2560px-Booking.com_logo.svg.png" alt="" class="scale-10 -ml-160" />
             </div>
         </footer>
+        <script src="./java/check-log.js"></script>
     </body>
 </html>

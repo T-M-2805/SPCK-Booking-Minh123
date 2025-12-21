@@ -31,10 +31,10 @@
             <div class="px-0 py-20 mx-auto max-w-7xl sm:px-4">
                     <div class="w-full px-4 pt-5 pb-6 mx-auto mb-4 bg-white rounded-none shadow-xl sm:rounded-lg sm:w-10/12 md:w-8/12 lg:w-6/12 xl:w-4/12 sm:px-6">
                         <h1 class="mb-4 text-lg font-semibold text-left text-gray-900">Create an account</h1>
-                        <form class="mb-8 space-y-4">
+                        <form class="mb-8 space-y-4" id="register-form">
                             <label class="block">
                                 <span class="block mb-1 text-xs font-medium text-gray-700">Phone number</span>
-                                <input class="form-input" type="email" placeholder="Ex. 1234567890" inputmode="email" required />
+                                <input class="form-input" type="number" placeholder="Ex. 1234567890" required id="phoneNumber"/>
                             </label>
                             <label class="block">
                                 <span class="block mb-1 text-xs font-medium text-gray-700">Birthday</span>
@@ -42,14 +42,14 @@
                             </label>
                             <label class="block">
                                 <span class="block mb-1 text-xs font-medium text-gray-700">Your password</span>
-                                <input class="form-input" type="password" placeholder="••••••••" required />
+                                <input class="form-input" type="password" placeholder="••••••••" required id="password"/>
                             </label>
                             <label class="block">
                                 <span class="block mb-1 text-xs font-medium text-gray-700">Password confirm</span>
-                                <input class="form-input" type="password" placeholder="••••••••" required />
+                                <input class="form-input" type="password" placeholder="••••••••" required id="repeatPassword"/>
                             </label>
                             <label class="flex items-center">
-                                <input type="checkbox" class="form-checkbox" />
+                                <input type="checkbox" class="form-checkbox" required/>
                                 <span class="block ml-2 text-xs font-medium text-gray-700 cursor-pointer">Agree to Privacy Policy</span>
                             </label>
                             <input type="submit" class="w-full py-3 mt-1 btn btn-primary bg-rose-600 rounded-sm font-semibold text-white" value="Register" />
@@ -66,5 +66,6 @@
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Booking.com_logo.svg/2560px-Booking.com_logo.svg.png" alt="" class="scale-10 -ml-160" />
             </div>
         </footer>
+        <script src="./java/regis.js"></script>
     </body>
 </html>
