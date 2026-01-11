@@ -8,6 +8,7 @@ btnAddRoom.addEventListener("click", () => {
     const desc = document.getElementById("desc-room").value;
     const price = document.getElementById("price-room").value;
     const image = document.getElementById("image-url").value;
+
     // kiểm tra dữ liệu hợp lệ
     if (!name) {
         alert("Vui lòng nhập tên món ăn");
