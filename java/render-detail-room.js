@@ -7,10 +7,10 @@ const image = document.getElementById("image-url");
 const queryString = window.location.search;
 const id = queryString.split("?")[1];
 
-// lấy ra danh sách món ăn từ localStorage
+// lấy ra danh sác từ localStorage
 const rooms = JSON.parse(localStorage.getItem("rooms")) || [];
 
-// tìm món ăn có id tương ứng
+// tìm id tương ứng
 const room = rooms.find((r) => r.id == id);
 
 //dele func
@@ -20,10 +20,10 @@ document.getElementById("deleteBtn").addEventListener("click", () => {
         text: "Sau khi xóa bạn sẽ không thể khôi phục lại!",
         icon: "info",
         willClose() {
-            // tìm index của món ăn cần xóa
+            // tìm index cần xóa
             const roomIndex = rooms.findIndex((r) => r.id == id);
             console.log(roomIndex);
-            // xóa món ăn khỏi mảng
+            // xóa khỏi mảng
             if (roomIndex !== -1) {
                 rooms.splice(roomIndex, 1);
                 // lưu lại mảng sau khi xóa vào localStorage
@@ -57,7 +57,7 @@ document.getElementById("deleteBtn").addEventListener("click", () => {
 // edit phòng khi bấm nút edit
 document.getElementById("editBtn").href = `edit-room.html?${room.id}`;
 
-// hiển thị thông tin món ăn lên trang
+// hiển thị thông tin lên trang
 if (room) {
     name.innerText = room.name;
     desc.innerText = room.desc;

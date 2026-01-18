@@ -7,15 +7,15 @@ const image = document.getElementById("image-url");
 let imagePreview = document.getElementById("image-preview");
 
 const queryString = window.location.search;
-// lấy ra danh sách món ăn từ localStorage
+// lấy ra danh sách từ localStorage
 const rooms = JSON.parse(localStorage.getItem("rooms")) || [];
 
 // lấy id từ URL
 const roomId = Number(queryString.split("?")[1]);
 
-// tìm món ăn có id tương ứng
+// tìm id tương ứng
 const room = rooms.find((r) => r.id === roomId);
-// hiển thị thông tin món ăn lên các input để chỉnh sửa
+// hiển thị thông tin lên các input để chỉnh sửa
 if (room) {
     name.value = room.name;
     location.value = room.location;
@@ -53,10 +53,10 @@ btnAddRoom.addEventListener("click", () => {
         return;
     }
 
-    // tìm index của món ăn cần cập nhật
+    // tìm index cần cập nhật
     const roomIndex = rooms.findIndex((r) => r.id === roomId);
 
-    // cập nhật thông tin món ăn
+    // cập nhật thông tin
     if (roomIndex !== -1) {
         rooms[roomIndex] = {
             id: roomId, // giữ nguyên id
@@ -68,10 +68,10 @@ btnAddRoom.addEventListener("click", () => {
             image: image.value,
         };
 
-        // lưu danh sách món ăn vào localStorage
+        // lưu danh sách vào localStorage
         localStorage.setItem("rooms", JSON.stringify(rooms));
 
-        // chuyển về trang danh sách món ăn
+        // chuyển về trang danh sách
         window.location.href = "index.html";
     }
 });
